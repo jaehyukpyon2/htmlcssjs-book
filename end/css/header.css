@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* header {
+    position: fixed;
+    color: white;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem; 
+} */
+
+/* header .container {
+    display: flex;
+    justify-content: space-between;
+    가장 왼쪽 아이템의 좌측 면, 가장 오른쪽 아이템의 우측면은 부모 컨테이너에 붙어있고,
+    아이템들 사이에 evenly space 공백 
+    align-items: center;
+    align-items: pg 287 (수직정렬) 
+    width: 100%;
+}  */
+
+/* header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    padding: 10px;
+    상/하/좌/우 패딩 적용 
+}
+
+header button {
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+}
+
+header h1 button {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul li button {
+    font-size: 1.2rem;
+} */
+
+header {
+    color: yellow!important;
+}
+
+header button {
+    color: yellow!important;
+}
+
+header {
+  position: fixed;
+  color: white;
+  top: 0;
+  z-index: 1;
+  /* width: 100%; */
+  padding: 1rem;
+  display: flex;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 10px;
+}
+header button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+header h1 button {
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav ul li button {
+  font-size: 1.2rem;
+}

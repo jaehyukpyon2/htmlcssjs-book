@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            /* child1 태그 안의 span 태그까지 같이 vertically centered 되는 게 아니다. */
+            width: 500px;
+            height: 500px;
+        }
+        .container div {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child1">
+            <span>Hello1?</span>
+        </div>
+        <div class="child2">
+            <span>Hello2?</span>
+        </div>
+    </div>
+</body>
+</html>
