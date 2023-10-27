@@ -64,13 +64,13 @@ header nav ul li button {
     font-size: 1.2rem;
 } */
 
-header {
+/* header {
     color: yellow!important;
 }
 
 header button {
     color: yellow!important;
-}
+} */
 
 header {
   position: fixed;

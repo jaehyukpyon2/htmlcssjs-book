@@ -104,6 +104,23 @@ main h2 {
 } */
 
 
+/* page 579 */
+/* 헤더 영역이 흰 색이기에, background가 흰 색일 시 글자가 잘 안 보이는 문제 해결 */
+header.active {
+  background-color: rgba(0,0,0);
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* 0% 가까워질수록 투명해짐 */
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 /* About Me */
 section {
     font-family: "Poppins", sans-serif;
