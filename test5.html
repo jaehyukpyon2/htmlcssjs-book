@@ -6,18 +6,52 @@
     <title>Document</title>
 
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
         .container {
             display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        /* .parent {
+            width: 500px;
+            height: 500px;
+            background-color: azure;
+        } */
+        .container > div:first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         /* .container h1 {
             width: 100%;
         } */
+        * {
+            list-style: none;
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>saklj</h1>
-        <h1>saklj</h1>
-    </div>
+    
+        <div class="container">
+            <div class="child1">asdfasd</div>
+            <div class="child2">
+                <ul>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ul>
+            </div>
+        </div>
+    
 </body>
 </html>

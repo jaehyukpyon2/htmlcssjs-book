@@ -1,11 +1,10 @@
 (function () {
   const spanEl = document.querySelector("main h2 span");
   const txtArr = [
-    "Web Publisher",
-    "Front-End Developer",
-    "Web UI Designer",
-    "UX Designer",
-    "Back-End Developer",
+    "backend developer",
+    "ready for do some work!",
+    "tired",
+    "undergraduate in computer science",
   ];
   let index = 0;
   let currentTxt = txtArr[index].split("");

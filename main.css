@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Varela+Round&display=swap");
 
 main {
-  width: 100%;
+  width: 100%; 
+  /* 뷰포트의 100% 값 */
   height: 100vh;
   /* 실제 보여지는 전체 영역 스크롤 같은 거 제외하고 그
-  한 화면에 전체적으로 보여지는 그 영역의 50% 값. 즉 스크롤을 아래로 해서
+  한 화면에 전체적으로 보여지는 그 영역의 100% 값. 즉 스크롤을 아래로 해서
   내린다면 main 요소는 위로 올라가서 감춰지게 된다.
   크롬 창 자체가 줄어든다고 하면, 당연히 보여지는 면적도 줄어들기 때문에
   vh 값도 줄어들게 된다. */
@@ -14,12 +15,15 @@ main {
   background-size: cover;
   display: flex;
   justify-content: center;
+  /* 주 축을 방향으로 즉 x축을 방향으로해서 가운데 */
   /* pg 286 */
   align-items: center;
+  /* 주축의 교차축 즉 y축을 방향으로해서 가운데 */
   text-align: center;
 }
 
 main h4 {
+  /* html의 폰트 16픽셀을 기준으로 */
   font-size: 2rem;
 }
 
@@ -27,12 +31,14 @@ main h2 {
   font-size: 3.5rem;
   margin: 2rem 0;
   letter-spacing: 3px;
+  /* 글자 사이의 간격 */
 }
 
 main p {
   max-width: 500px;
   /* 창 크기가 줄어들면 500px 아래로 줄어들기는 하는데 max값은 500px */
   margin: 0 auto;
+  /* 가운데 정렬 */
   font-size: 1.25rem;
 }
 
@@ -53,12 +59,17 @@ main button.mouse {
   color: white;
   font-size: 2rem;
   position: absolute;
+  /* 자신의 부모 요소에 position 속성이 적용된 게 없으니, 스크롤을 맨 위로 올렸을 때
+  한 눈에 보이는 뷰포트를 기준으로 position을 잡는다. 즉 스크롤을 맨 위로 올렸을 때
+  그 지점에서 bottom의 1rem 떨어진 곳에 자리를 잡고, 스크롤을 아래로 해서 화면을 위로 올려버리면
+  이 마우스도 딸려서 올라간다.   */
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   animation: upDown 1s ease-in-out infinite;
   cursor: pointer;
 }
+/* 사용자 애니메이션을 정의하는 부분 */
 @keyframes upDown {
   0% {
     bottom: 1rem;
@@ -72,6 +83,7 @@ main button.mouse {
 }
 
 main h2 span::after {
+  /* I am ~~~ 부분의 스팬테그이 after 부분에 마우스 커서 효과를 넣어주는 부분 */
     content: "";
     height: 40px;
     width: 3px;
@@ -80,6 +92,7 @@ main h2 span::after {
     animation: blink .7s ease-in-out infinite;
 }
 
+/* 마우스 커서 깜박임 효과 주는 부분 */
 @keyframes blink {
     0% {
         opacity: 1;
@@ -105,7 +118,7 @@ main h2 {
 
 
 /* page 579 */
-/* 헤더 영역이 흰 색이기에, background가 흰 색일 시 글자가 잘 안 보이는 문제 해결 */
+/* 헤더 영역의 글씨가 흰 색이기에, background가 흰 색일 시 글자가 잘 안 보이는 문제 해결 */
 header.active {
   background-color: rgba(0,0,0);
   animation: fadeIn 0.5s ease-in-out;
@@ -151,7 +164,9 @@ section .title p {
 section .about-self::after {
     content: "";
     clear: both;
-    display: block;
+    display: block; 
+    /* .about-self 요소는 float:left 가 적용된 요소 (.left, .right)의 직속
+    부모요소 즉 컨테이너 */
 }
 
 section .about-self .left img {
@@ -167,6 +182,14 @@ section .about-self .right {
     width: 50%;
     float: left;
     padding: 0 2rem;
+}
+
+section .about-self .right::after {
+    /* content: "";
+    clear: both;
+    display: block; */
+    /* .right 요소에서 float: left가 끝나는데, 이 요소의 after에다가는 위에 거를 해 봤자
+    소용이 없고, 자신을 감싸고 있는 부모에다가 해야 소용이 있다.  */
 }
 
 section .about-self .right h3 {
@@ -194,6 +217,8 @@ section .do-me::after {
   content: "";
   display: block;
   clear: both;
+  /* 여기도 마찬가지, 세 개의 .do-inner에 float:left 가 적용됐으니, 
+   .do-inner의 부모 요소인 현재 이 요소에 ::after 적용 필요 */
 }
 
 section .do-me .do-inner {
@@ -419,6 +444,9 @@ section.contact .contact-me .right button {
 }
 
 @media screen and (max-width:992px) {
+  * {
+    color: yellow;
+  }
   html {
     font-size: 14px;
     /* rem 의 기준이 되는 html의 font-size 값... */
