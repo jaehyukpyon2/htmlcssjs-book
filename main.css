@@ -11,7 +11,7 @@ main {
   vh 값도 줄어들게 된다. */
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("images/me.jpg") center center;
+    url("images/img1.png") center center;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -262,7 +262,7 @@ section .do-me .do-inner:hover {
 
 /* background */
 .bg {
-  background: url('./images/background.jpg') center center;
+  background: url('./images/img3.gif') center center;
   background-size: cover;
   background-attachment: fixed;
   /* background image는 view port 뒷단에 항상 고정되어 있어 움직이지 않는다. */
